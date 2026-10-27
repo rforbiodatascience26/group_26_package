@@ -31,4 +31,10 @@ Suggests:
     rmarkdown,
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+<<<<<<< HEAD
 VignetteBuilder: knitr
+=======
+Imports: 
+    ggplot2,
+    stringr
+>>>>>>> 2f07e6885f442f1342cd73bc146fb8c8838af904
