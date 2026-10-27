@@ -2,6 +2,25 @@ Package: centralDogma
 Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1.0
+<<<<<<< HEAD
+Authors@R: 
+    c(person(given = "Giovanni",
+             family = "Biasiolo",
+             role = c("aut", "cre"),
+             email = "s263492@dtu.dk"),
+      person(given = "Matilde",
+             family = "Gherardi",
+             role = "aut",
+             email = "s263512@dtu.dk"),
+      person(given = "Sofia",
+             family = "Sironi",
+             role = "aut",
+             email = "s263477@dtu.dk"),
+      person(given = "Pedram",
+             family = "Rastgoo",
+             role = "aut",
+             email = "s263747@dtu.dk"))
+=======
 Authors@R:
   c(person(given = "Giovanni",
            family = "Biasiolo",
@@ -19,6 +38,7 @@ Authors@R:
            family = "Rastgoo",
            role = "aut",
            email = "s263747@dtu.dk"))
+>>>>>>> 5544d09c4ff733f28bf3b0ce90d9fcdf5a4e6707
 Description: This package replicates the central dogma of molecular biology.
 License: MIT + file LICENSE
 Encoding: UTF-8
