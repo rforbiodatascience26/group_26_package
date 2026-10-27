@@ -2,5 +2,9 @@
 ^\.Rproj\.user$
 ^LICENSE\.md$
 ^data-raw$
+<<<<<<< Updated upstream
 ^doc$
 ^Meta$
+=======
+^README\.Rmd$
+>>>>>>> Stashed changes
