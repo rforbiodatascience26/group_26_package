@@ -5,23 +5,20 @@ Version: 0.1.0
 Authors@R:
   c(person(given = "Giovanni",
            family = "Biasiolo",
-           role = c("aut", "cre"), 
-           email = "s263492@dtu.dk"), 
+           role = c("aut", "cre"),
+           email = "s263492@dtu.dk"),
     person(given = "Matilde",
            family = "Gherardi",
            role = "aut",
-           email = "s263512@dtu.dk")
+           email = "s263512@dtu.dk"),
     person(given = "Sofia",
            family = "Siorni",
            role = "aut",
-           email = "s263477@dtu.dk")
+           email = "s263477@dtu.dk"),
     person(given = "Pedram",
            family = "Rastgoo",
            role = "aut",
-           email = "s263747@dtu.dk")
-           )
-
-
+           email = "s263747@dtu.dk"))
 Description: This package replicates the central dogma of molecular biology.
 License: MIT + file LICENSE
 Encoding: UTF-8
@@ -29,3 +26,6 @@ LazyData: true
 Depends: 
     R (>= 3.5)
 RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
