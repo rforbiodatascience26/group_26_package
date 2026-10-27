@@ -1,0 +1,89 @@
+---
+title: "centralDogma"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{centralDogma}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+------------------------------------------------------------------------
+
+**GitHub repository:** [https://github.com/26/centralDogma](https://github.com/YOUR-GROUP/centralDogma)
+
+# Introduction
+
+The `centralDogma` package provides functions for exploring the central dogma of molecular biology: the flow of genetic information from DNA to RNA and then to protein. It includes functions for generating random DNA sequences, transcribing DNA into RNA, splitting sequences into codons, and translating RNA codons into amino acids.
+
+# Using the package
+
+## 1. Generate a DNA sequence
+
+The `random_dna()` function generates a random DNA sequence of a specified length using the nucleotides A, T, G and C.
+
+```         
+library(centralDogma)
+
+dna <- random_dna(12)
+dna
+```
+
+The output varies each time because the nucleotides are sampled randomly.
+
+## 2. Transcribe DNA into RNA
+
+The `dna_to_rna()` function replaces thymine (T) with uracil (U), producing an RNA sequence.
+
+```         
+rna <- dna_to_rna(dna)
+rna
+```
+
+For example, `dna_to_rna("ATGGACCT")` returns `"AUGGACCU"`.
+
+## 3. Split RNA into codons
+
+The `split_codons()` function divides a sequence into groups of three characters. The optional `start` parameter specifies the position where splitting begins. In RNA, these triplets are codons.
+
+```         
+codons <- split_codons(rna)
+codons
+```
+
+For example, `split_codons("AUGGCCUUU")` returns `"AUG"`, `"GCC"` and `"UUU"`. Any incomplete trailing group is omitted.
+
+## 4. Translate codons into a protein
+
+The `codons_to_protein()` function translates a vector of RNA codons into a protein sequence using the package's codon table.
+
+```         
+codons_to_protein(c("AUG", "GGC", "UUU"))
+```
+
+The result is `"AGF"`, representing methionine, glycine and phenylalanine using their one-letter amino acid codes.
+
+## 5. Combine the functions
+
+The functions can be used together to demonstrate a simplified DNA-to-RNA-to-protein workflow.
+
+```         
+dna <- random_dna(12)
+rna <- dna_to_rna(dna)
+codons <- split_codons(rna)
+protein <- codons_to_protein(codons)
+
+dna
+rna
+codons
+protein
+```
+
+This workflow demonstrates how the functions complement each other. Randomly generated sequences may not represent real genes or produce biologically meaningful proteins. The example also does not guarantee a start codon or a biologically valid reading frame.
+
+# Applications and future additions
+
+The package can be used for simple bioinformatics exercises and to learn how DNA is converted into RNA and proteins. It also helps users explore codons and the genetic code.
+
+Future improvements could include checking DNA sequences for errors, generating the complementary DNA strand, and producing RNA from a DNA template strand. The current `dna_to_rna()` function only replaces T with U, so it could be improved to create the complementary RNA sequence using base pairing. Other additions could include finding start and stop codons and identifying open reading frames.
+
+\
